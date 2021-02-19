@@ -11,7 +11,7 @@ static const Block blocks[] = {
 
     {"BAT:", "cat /sys/class/power_supply/BAT0/capacity | sed 's/$/%/'",    120,	0},
 
-	{"", "date '+%d/%b %l:%M%p'",				                     	    60,		0},
+	{"", "date '+%a %d/%b %l:%M%p'",			                     	    60,		0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
