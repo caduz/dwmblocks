@@ -5,7 +5,7 @@ static const Block blocks[] = {
 
 	{"MEM:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	10,		0},
 
-    {"HD:", "df -h /dev/nvme0n1p2 | awk 'NR==2 {print $3 \"/\" $4}'",        120,	0},
+    {"HD:", "df -h /dev/nvme0n1p2 | awk 'NR==2 {print $3 \"/\" $2}'",        120,	0},
 
     {"VOL:", "pacmd list-sinks|grep -A 15 '* index'| awk '/volume: front/{ print $5 }' | sed 's/[%|,]/%/g'",   10,		0},
 
